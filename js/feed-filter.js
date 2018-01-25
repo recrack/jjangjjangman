@@ -118,10 +118,10 @@ window.FeedFilter = (function() {
 
       var fetchingText = '';
       if (!hasFinished) {
-        fetchingText = 'Fetching page ' + page + '... ';
+        fetchingText = '짱짱맨 검색중  ' + page + ' ... ';
       }
-      $feedCount.html( fetchingText + totalCount + ' articles in total <span class="spacer">&middot;</span> ' +
-        '<a href="https://steemit.com/trending/' + tag + '" target="_blank">trending</a>');
+      $feedCount.html( '전체글 ' + fetchingText + totalCount + '<span class="spacer">&middot;</span> ' +
+        '    <a href="https://steemit.com/trending/' + tag + '" target="_blank">trending</a>');
 
       // Fetch average post payout for each user
       // and update DOM once data is ready
@@ -259,7 +259,7 @@ window.FeedFilter = (function() {
       page = 1;
       permlinks = [];
       $feedContainer.empty();
-      $feedCount.text('Fetching...');
+      $feedCount.text('검색중...');
 
       fetchNext(tag);
     },

@@ -1,6 +1,6 @@
 window.Account = (function() {
   var KEY_USERNAME = 'USERNAME';
-  var username = localStorage.getItem(KEY_USERNAME) || 'tabris';
+  var username = localStorage.getItem(KEY_USERNAME) || 'recrack';
 
   var setAccount = function(newName) {
     username = newName;
@@ -31,6 +31,7 @@ window.Account = (function() {
             setAccount(newName);
         }
       });
+      $("#follow").attr("href", "https://steemit.com/@recrack")
       setInterval(function() {
         setAccount(username);
       }, 60000); // Refresh accounts every minute

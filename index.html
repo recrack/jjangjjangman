@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>UNDER_STEEMED</title>
+    <title>짱짱맨 프로젝트 | jjangjjangman Project</title>
 
     <meta name="description" content="Curated list of Steemit under-valued posts"/>
     <meta name="keywords" content="steemit, under value, curation, tool, voting power, stats, curate post"/>
@@ -19,40 +19,53 @@
   <body>
     <div class="errors">Connection error</div>
 
+    <header>
+      <hr/>
+      <center>
+        <p><h2>스팀잇 활성화 프로젝트 - 짱짱맨</h2></br><a href="https://steemit.com/created/jjangjjangman">jjangjjangman</a></p>
+        <p>지원자 모집 : <a href="https://open.kakao.com/o/g0wEPeG" target="_blank">카카오톡 오픈채팅</a></p>
+        <p>짱짱맨을 소개합니다. <a href="https://steemit.com/kr/@virus707/24orv4" target="_blank">보러가기</a>
+        <p>보팅 및 댓글 포스팅 방법 : (추가예정), 지원자 : (추가예정)</p> 
+        <p>짱짱맨은 누구인가? <a href="https://steemit.com/@virus707" target="_blank">@virus707</a></p>
+      </center>
+    </header>
+    <hr/>
+    <!--
     <div id="account-container"></div>
     <script id="account-template" type="text/x-handlebars-template">
       <h1>
         <a href="https://steemit.com/@{{name}}" target="_blank">@{{name}}</a>
         <small>(VP: {{voting_power}}%)</small>
         <button id="change-user" class="button small">Change</button>
+        <button id="follow" class="button small">Follow</button>
       </h1>
     </script>
-
     <form id="tag-form">
       <input type="text" id="tag-input" />
       <button id="add-tag" class="button">Add Tag</button>
     </form>
+    -->
     <div class="tags" id="tags-container"></div>
 
     <form id="option-form" class="option-form">
       <label>
-        created before
+        포스트 생성 시간 
         <span class="select-container">
           <select id="option-created" class="option-select">
-            <option value="0">0 minutes ago</option>
-            <option value="1">1 minute ago</option>
-            <option value="5">5 minutes ago</option>
-            <option value="15">15 minutes ago</option>
-            <option value="30" selected>30 minutes ago</option>
-            <option value="1440">1 day ago</option>
-            <option value="4320">3 days ago</option>
-            <option value="8640">6 days ago</option>
+            <option value="0">방금</option>
+            <option value="1">1분전</option>
+            <option value="5">5분전</option>
+            <option value="15">15분전</option>
+            <option value="30" selected>30분전</option>
+            <option value="1440">1일전</option>
+            <option value="4320">3일전</option>
+            <option value="8640">6일전</option>
           </select>
         </span>
         <span class="spacer">&middot;</span>
       </label>
       <label>
-        at least
+        좋아요
         <span class="select-container">
           <select id="option-votes" class="option-select">
             <option value="0" selected>0 votes</option>
@@ -66,7 +79,7 @@
         <span class="spacer">&middot;</span>
       </label>
       <label>
-        values under
+        보상액
         <span class="select-container">
           <select id="option-value" class="option-select">
             <option value="1">1 SBD</option>
@@ -79,67 +92,68 @@
         <span class="spacer">&middot;</span>
       </label>
       <label>
-        over
+        글자수 
         <span class="select-container">
           <select id="option-length" class="option-select">
-            <option value="100">100 characters</option>
-            <option value="500" selected>500 characters</option>
-            <option value="1000">1,000 characters</option>
-            <option value="2000">2,000 characters</option>
-            <option value="3000">3,000 characters</option>
-            <option value="5000">5,000 characters</option>
+            <option value="100">100자 이상</option>
+            <option value="500" selected>500자 이상</option>
+            <option value="1000">1,000자 이상</option>
+            <option value="2000">2,000자 이상</option>
+            <option value="3000">3,000자 이상</option>
+            <option value="5000">5,000자 이상</option>
           </select>
         </span>
-        long
       </label>
 
       <br>
 
       <label>
-        at least
+         이미지
         <span class="select-container">
           <select id="option-images" class="option-select">
-            <option value="0">0 images</option>
-            <option value="1" selected>1 image</option>
-            <option value="2">2 images</option>
-            <option value="3">3 images</option>
-            <option value="5">5 images</option>
-            <option value="10">10 images</option>
+            <option value="0">0개 이상</option>
+            <option value="1" selected>1개 이상</option>
+            <option value="2">2개 이상</option>
+            <option value="3">3개 이상</option>
+            <option value="5">5개 이상</option>
+            <option value="10">10개 이상</option>
           </select>
+        </span>
+        </span>
         </span>
         <span class="spacer">&middot;</span>
       </label>
 
       <label>
-        author with at least
+        평판(reputation)
         <span class="select-container">
           <select id="option-reputation" class="option-select">
-            <option value="0">0 reputation</option>
-            <option value="25" selected>25 reputation</option>
-            <option value="30" selected>30 reputation</option>
-            <option value="35" selected>35 reputation</option>
-            <option value="40" selected>40 reputation</option>
-            <option value="45" selected>45 reputation</option>
-            <option value="50" selected>50 reputation</option>
-            <option value="55" selected>55 reputation</option>
-            <option value="60" selected>60 reputation</option>
+            <option value="0">0 이상</option>
+            <option value="25" selected>25 이상</option>
+            <option value="30" selected>30 이상</option>
+            <option value="35" selected>35 이상</option>
+            <option value="40" selected>40 이상</option>
+            <option value="45" selected>45 이상</option>
+            <option value="50" selected>50 이상</option>
+            <option value="55" selected>55 이상</option>
+            <option value="60" selected>60 이상</option>
           </select>
         </span>
         <span class="spacer">&middot;</span>
       </label>
 
       <label>
-        sort by
+        정렬 
         <span class="select-container">
           <select id="option-sort" class="option-select">
-            <option value="recent" selected>recent post</option>
+            <option value="recent" selected>최신글</option>
             <option value="estimated_reward">higher estimated reward</option>
           </select>
         </span>
-        first
       </label>
 
     </form>
+    </hr>
 
     <script id="tag-template" type="text/x-handlebars-template">
       <div class="tag-button" data-tag="{{tag}}">
@@ -182,8 +196,19 @@
     <footer>
       <hr/>
       <center>
-        <p>Do you like it? Buy me a beer to support this project ;)</p>
-        <a href="https://steemit.com/@tabris" target="_blank"><img src="./img/follow-btn@2x.png" alt="Follow @tabris" width="186" height="36" /></a>
+        <p>짱짱맨 지원 프로젝트 홈페이지가 맘에 드시나요? :)</br>전 짱짱맨 프로젝트가 성공적으로 진행되었으면 하는 바램에 홈페이지를 짱짱맨에 맞게 제작해 보았습니다.</br>모두 스팀잇 부자되세요!!</p>
+        <a href="https://v2.steemconnect.com/sign/transfer?to=recrack&amount=1.000%20SBD&memo=짱짱맨화이팅"><b>홈페이지 제작자에게 1 SBD 후원하기</b></a>
+        <div id="account-container"></div>
+        <script id="account-template" type="text/x-handlebars-template">
+          <h1>
+            <a href="https://steemit.com/@{{name}}" target="_blank">@{{name}}</a>
+            <small>(VP: {{voting_power}}%)</small>
+          </h1>
+        </script>
+        <a href="https://steemit.com/@recrack" target="_blank"><img src="https://steemitimages.com/DQmb2zJA9dkCCt75FJorrsCSHhUY4LdpvCBnC9mvVf45SYQ/follow3.gif" alt="Follow @recrack" width="70" height="70" /></a>
+              </center>
+      <center></br>
+        <p>Forked from <a href="https://github.com/sydneyitguy/understeemed">sydneyitguy</a> Thanks!! :)</p>
       </center>
     </footer>
 
@@ -203,16 +228,16 @@
       TagForm.bind();
       TagForm.fetchCurrentTag();
     </script>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113095012-1"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      ga('create', 'UA-102510523-1', 'auto');
-      ga('send', 'pageview');
+      gtag('config', 'UA-113095012-1');
     </script>
+
   </body>
 </html>
 
